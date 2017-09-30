@@ -1,0 +1,38 @@
+// <First Name> <Last Name>
+// <Contact Information>
+// 2017.MM.DD
+// For the University of Washington Bothell CSS <Course Number><Course Section>
+// Autumn 2017, Graduate Certificate in Software Design & Development (GCSDD)
+//
+// File Description:
+// <Short explanation of file purpose and function>
+//
+// Required files:
+// <Files needed to run this program>
+//
+// Acknowledgements:
+// <Contributors and sources>
+//
+// License: (Note to student, the following is optional)
+// This software is published under the GNU general license which guarantees
+// end users the freedom to run, study, share and modify the software.
+// https://www.gnu.org/licenses/gpl.html
+//
+// ---- BEGIN STUDENT CODE ----
+//
+// ---- END STUDENT CODE ----
+//
+#import <ThingsToImport>
+
+using namespace std;
+
+int main()<
+    cout << "Hello, World!" << endl;
+
+// <Variable Type> <Data Type> <Variable Name> <Assignment Operator> <Value>
+    const double PI = 3.14159;
+// "const" - Variable cannot be changed (similar to "final" in Java)
+// Convention is to capitalize 'const' variables (also similar to Java)
+
+    return 0;
+}
