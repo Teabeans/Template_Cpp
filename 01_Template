@@ -7,6 +7,9 @@
 // File Description:
 // <Short explanation of file purpose and function>
 //
+// (If this file contains 'main()', Program Description:
+// <Explanation of overall program purpose and function>
+//
 // Required files:
 // <Files needed to run this program>
 //
@@ -17,6 +20,22 @@
 // This software is published under the GNU general license which guarantees
 // end users the freedom to run, study, share and modify the software.
 // https://www.gnu.org/licenses/gpl.html
+//
+// Code Standards:
+// I. Comment at beginning of file (above) stating:
+//    A. File Name
+//    B. Author Name
+//    C. Date
+//    D. Description of code purpose
+// 
+// II. Indentation: 3 whitespaces ("   ")
+// III. Variables:
+//    A. Descriptive, legible name
+//    B. Comment over any variable declaration describing:
+//       1. Its use in the algorithm
+//       2. Invariant information such as legal ranges of values
+//
+//
 //
 // ---- BEGIN STUDENT CODE ----
 //
