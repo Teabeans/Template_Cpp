@@ -1,0 +1,236 @@
+// Tim Lum
+// twhlum@gmail.com
+// https://uwb-hibernaculum.slack.com/
+// 2017.10.01
+// For the University of Washington Bothell CSS 501A
+// Autumn 2017, Graduate Certificate in Software Design & Development (GCSDD)
+//
+// File Description:
+// Distillation and printable form of course 'Design and Coding Standards'
+//
+// Required files:
+// None
+//
+// Acknowledgements:
+// Source material from:
+// University of Washington Bothell
+// CSS 501A Data Structures And Object-Oriented Programming I
+// "CSS 501 Design and Coding Standards"
+// Michael Stiber
+//
+// Source file originally at:
+// https://canvas.uw.edu/courses/1116064/pages/css-501-design-and-coding-standards
+// (Deprecated by end of quarter; source closed. Content included as 'APPENDIX_01')
+
+// License:
+// This software is published under the GNU general license which guarantees end users
+// the freedom to run, study, share and modify the software.
+// https://www.gnu.org/licenses/gpl.html
+
+// ---- BEGIN PRINTABLE CONTENT ----
+
+--- STEP 00 --- DO YOU NEED DESIGN DOCUMENTATION? ---
+
+If 'yes' to any of the following, documentation is required:
+
+I. Will more than one person work on or examine this code?
+   Y / N
+
+II. Is the problem too large to mentally comprehend in its entirety?
+   Y / N
+
+III. Will the code ever be revisited at a future date?
+   Y / N
+
+IV. Will questions by other users ever arise regarding the code?
+   Y / N
+
+
+--- STEP 01 --- PROBLEM SPECIFICATION ---
+
+Specification - A precise and detailed problem statement. Divided into five sections:
+
+I. Problem Statement - Further divided into general categories:
+   A. Problem description - A textual explanation of the problem to be solved.
+Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti. Sed ne justo necessitatibus. An nonumy equidem sanctus pro, usu ei eruditi vituperatoribus, ius virtute consulatu appellantur ex. In audire nonumes theophrastus sea, no dicunt tractatos vis. Mediocrem appellantur te mei.
+
+   B. Assumptions being made
+Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti. Sed ne justo necessitatibus. An nonumy equidem sanctus pro, usu ei eruditi vituperatoribus, ius virtute consulatu appellantur ex. In audire nonumes theophrastus sea, no dicunt tractatos vis. Mediocrem appellantur te mei.
+   
+   C. Clarifications needed
+Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti. Sed ne justo necessitatibus. An nonumy equidem sanctus pro, usu ei eruditi vituperatoribus, ius virtute consulatu appellantur ex. In audire nonumes theophrastus sea, no dicunt tractatos vis. Mediocrem appellantur te mei.
+
+   D. Assumptions that can be made
+Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti. Sed ne justo necessitatibus. An nonumy equidem sanctus pro, usu ei eruditi vituperatoribus, ius virtute consulatu appellantur ex. In audire nonumes theophrastus sea, no dicunt tractatos vis. Mediocrem appellantur te mei.
+
+   E. Corner cases
+Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti. Sed ne justo necessitatibus. An nonumy equidem sanctus pro, usu ei eruditi vituperatoribus, ius virtute consulatu appellantur ex. In audire nonumes theophrastus sea, no dicunt tractatos vis. Mediocrem appellantur te mei.
+
+II. Input Data
+   A. Description:
+   
+
+   B. Source:
+   
+
+   C. Format:
+   
+
+   D. Invalid data:
+   
+
+III. Output Data
+   A. Description:
+   
+
+   B. Format:
+   
+
+IV. Error Handling - Error detection, message, and handling
+   A. <ERROR NAME GOES HERE>
+      0. Description: 
+      1.     Message: 
+      2.      Handle: 
+
+   B. <ERROR NAME GOES HERE>
+      0. Description: 
+      1.     Message: 
+      2.      Handle: 
+
+   C. <ERROR NAME GOES HERE>
+      0. Description: 
+      1.     Message: 
+      2.      Handle: 
+
+V. Test Plan - Should focus on testing the correct operation of the program, not on erroneous inputs.
+   A. Case 0: <Description>
+      0. High boundary: 
+      1. Typical value: 
+      2. Low boundary : 
+
+   B. Case 1: <Description>
+      0. High boundary: 
+      1. Typical value: 
+      2. Low boundary : 
+
+--- STEP 02 --- STRUCTURE CHARTS ---
+
+I. See 'APPENDIX_00' - Displays the hierarchical algorithmic structure of a system.
+   A. Designate sub-procedures
+   B. Use annotated lines to indicate calls between functions
+      0. Use arrowheads on lines to indicate direction of function calls
+      1. Parameters - One-way information passed, but not modified.
+         a. Draw with dot and arrow.
+         b. Label with the name used by the calling procedure.
+      2. Return values
+         a. If return value is not used by calling function, then omit.
+         b. Otherwise, draw with dot and arrow.
+         c. And label with the name used by the called procedure.
+      3. 
+
+
+
+
+
+// ---- END PRINTABLE CONTENT ----
+
+--- APPENDIX_00 ---
+Program UML Chart - <HYPERLINK OR ADDRESS GOES HERE>
+
+--- APPENDIX_01 ---
+CSS 501 Design and Coding Standards
+"If builders built buildings the way programmers wrote programs, then the first woodpecker to come along would destroy civilization."
+
+"If cars had followed the same developmental path as computers, a Rolls Royce would cost $100, get a million miles per gallon, and explode once a year, killing everyone inside."
+
+The two quotes above vividly describe the contrast between the sometimes-typical practice of programming and that of other engineering disciplines. What is the difference? Programming is often not practiced as an engineering discipline; programmers often take pride in their ability to hack out solutions without much in the way of principled thought behind them. They confuse difficult-to-understand code with elegant solutions. "If it was hard to write, it should be hard to understand!"
+
+This should not be our goal — our goal should be to make the computing profession more like other engineering fields. This means spending considerable time and effort on activities other than programming. At first blush, this may seem a waste of time. However, nobody would think that of the time spent by a civil engineer designing a building, or an electrical engineer designing a computer. In those other fields, there is a big distinction made between design and construction, with the latter often not considered engineering per se. The same should be true in our profession, with software design being engineering and programming becoming coding.
+
+The reasons for this are typically couched in terms of dollars, because the largest consumers of software engineers have been corporations, and it is most convenient for them to convert everything into units of money. However, almost all of the arguments made in favor of discipline in software design for the corporate environment also apply elsewhere.
+
+The key to to understanding the advantage of the "design first" approach is to consider the entire software life cycle. When one writes code without designing it ahead of time (and therefore without any design documents produced), one is making (at least) all of the following assumptions:
+
+That only one person (oneself) will ever have to look at the code.
+That the problem is relatively trivial (that one can keep the entire solution in one's head, down to the smallest detail).
+That the program will be used once, then thrown away (so one won't have to remember 6 months from now what one did before).
+That there will only be one user (so no need to refer to design documentation to answer user questions).
+If any of these assumptions are violated, then a design is necessary before any code is written (except perhaps for some prototyping, though there should still be informal designs done for those):
+
+If more than one person needs to write code or work on the design, then a design document is the only way to communicate system function. Code is not documentation, it is implementation. Code does not indicate the function a program is supposed to perform; it only indicates the function that a program actually does perform. Additionally, code is a set of formal instructions meant for a computer; it is an extremely inefficient way to convey meaning to human beings. Often, it is easier (and perhaps faster) to rewrite code than to understand it undocumented.
+The solution to any nontrivial problem must be worked out in advance. Systems are often implemented in subsystems or modules, and interoperation must be assured. One may need to switch one's attention from one part of the system to another, and design documentation is an essential knowledge base for storing what is known about parts one isn't currently working on.
+Six months or more from now, it can be difficult to remember exactly why everything in the code is there. So, not only is design documentation necessary for communication with others, it is also necessary for communication with future versions of oneself.
+Ofttimes, users will ask questions about software not answered in whatever user guide is produced. At that point, if design documentation is available, and answer may be easily produced. If the answer so arrived at does not conform to the user's experience with the program, then a bug has been discovered. Therefore, design documentation also helps in the debugging process, allowing one to determine when actual system operation deviates from that which is desired.
+"A physician, a civil engineer, and a computer scientist were arguing about what was the oldest profession in the world. The physician remarked, 'Well, in the Bible, it says that God created Eve from a rib taken out of Adam. This clearly required surgery, and so I can rightly claim that mine is the oldest profession in the world.' The civil engineer interrupted, and said, 'But even earlier in the book of Genesis, it states that God created the order of the heavens and the earth out of chaos. This was the first and certainly the most spectacular application of civil engineering. Therefore, fair doctor, you are wrong: mine is the oldest profession in the world.' The computer scientist leaned back in her chair, smiled, and then said confidently, 'Ah, but who do you think created the chaos?' "
+
+
+— Grady Booch, Object-Oriented Analysis and Design
+
+Specification and Design
+
+This involves two parts: determination of the desired system functionality (specification) and the actual design. The former involves major interaction with the end-users; the latter brings to bear CS knowledge (theory, algorithms, practice) and software engineering technique. We go to this trouble for one simple reason: software systems are the most complex objects routinely constructed by people. A thorough, careful design and development process is the only practical way to manage this complexity. As Grady Booch says, "We observe that this inherent complexity derives from four elements: the complexity of the problem domain, the difficulty of managing the development process, the flexibility possible through software, and the problems of characterizing the behavior of discrete systems."
+
+Your documentation should be written so that someone else could take your specification and design the program, or your design and understand how your program works (including be able to modify your code).
+
+For this class, you must write a problem specification and a program design. These will be used in the peer design review in class, and then handed in to receive credit. The process for conducting a peer design review will be covered in class; below I present a description of what your documentation should contain. Note that, as you read the Carrano and Henry textbook (Appendix D), this will seem very much like the denigrated waterfall software development method. This mostly reflects the fact that I am asking you to design first and check your design in class; it doesn't mean that you won't be iterating back and forth among analysis, design, implementation, and test. In fact, I strongly suggest that you at least take an incremental approach to implementation, so that you always have working code that does something.
+
+The specification makes the problem statement precise and detailed. There should be nothing ambiguous or unknown left after the specification. Your specification should not just be a regurgitation of the assignment statement; they are purposely left vague and incomplete so as to require you to go through a process of refining precisely what the program should do. Your specification should reflect the results of this phase of your homework, and your grade for the homework will be, in part, determined by the specification. Divide your specification into the following sections:
+
+Problem statement. In your own words, introduce and describe the problem to be solved. This section should also answer the following questions: What assumptions are possible? Are there special cases? Is there anything unclear in the original problem statement given to you that you clarified with me? Any assumptions that you made yourself?
+Input data. What is the program's input data? From where will it come? In what format? What data is valid and what data is invalid?
+Output data. What is the form of the output?
+Error handling. What error detection and error messages are necessary?
+Test Plan. Consider the set of possible inputs to your program (defined in the "Input Data" section). Can you break this up into subsets which are similar in some way? For example, if you were writing a tax preparation program, the part that deals with capital gains might treat negative numbers (losses) differently than positive ones (gains). For each of these subsets, choose a small number (perhaps three) of test cases (one good rule of thumb is to use the two boundary elements [largest and smallest values] and one typical value). For each input, determine what the correct output should be. The resulting table of (input, output) pairs is your test plan. Make sure you document the rationale for your test plan; don't just report the test plan by itself. Do not just produce a plan that tests erroneous input — your test plan should focus on testing the correct operation of your program.
+The program design document is a complete and unambiguous description of how the program will work. It is language-independent, and includes a description of the overall structure of your code (classes, objects, their interfaces, and their relationships). This should be the result of your own design process performed prior to the start of coding, rather than something done after you've written the program. For this class, I expect two main parts to your design: structure charts and simple class diagrams.
+
+Structure Charts
+A structure chart graphically displays the hierarchical algorithmic structure of a system. The figure below presents a simple structure chart.
+
+structure-chart.png
+
+It shows how the program is broken into (sub)procedures, which functions call which, and the data they pass back and forth. Each function in your program should be represented in the chart by a rectangle with the function name inside (if the function is a method of some class, then use the C++ notation className::functionName). Lines connect calling procedures to called ones, with arrows indicating the direction of the call. If a procedure is recursive (calls itself), there is no need to indicate this in the structure chart. These lines are annotated to indicate parameters passed and values returned as follows:
+
+“Pure” parameters These are either passed by value or as const references; they are not modified by the called procedure. Indicate these by a dot with an arrow pointing to the called procedure. Label them with the parameter name(s) — use the names the calling procedure uses.
+
+Return values Indicate these by dots with arrows pointing back to the calling procedure, labeled by the name the calling procedure uses (if the result is stored in a variable) or (if the value is used only ephemerally, as the return value of pow() in a = b + pow(c,d)) not labeled at all. If the return value is not used by the calling procedure, then omit it.
+
+Modified parameters These are parameters passed by reference or to which pointers are passed, and which are possibly modified by the called procedure. Indicate these with labeled dots that have arrows pointing to both the called and calling procedures.
+
+You use structure charts in your design by starting with the entire problem to solve — this is the top box of your structure chart. Break this problem into major subproblems, and write down how you could solve the entire problem if you could solve the subproblems. This gives you enough information to add the subproblems to the chart as procedures, with properly annotated calls. Repeat this process for each subproblem until you’ve reached problems that you can solve directly. The resulting structure chart and notes is your structured design. Your design documentation should include both structure charts and the pseudocode you wrote during the above decomposition process.
+
+ Simple Class Diagrams
+Class diagrams define the static structure of an object-oriented system (systems with a number of interacting objects will also have a dynamic, run-time structure, but we will leave this to later). The figure below shows two versions of a simplified UML (Unified Modeling Language) icon for a class: one with detailed information (left) and one without (right). You should only draw one of these in any one diagram; for this course, that will always be the one on the left. A class icon is a rectangle with the class name inside (an icon for an object has the name underlined, so don’t underline the class name).
+
+Basic class UML
+
+A class icon is a rectangle with the class name inside. An icon for an object is the same, but with the name underlined. The detailed view is broken into three parts:
+
+The class name (top).
+The attributes (middle). Each attribute has a name, an optional type, and an optional initial value. Each attribute is prefixed by its visibility: public (+), protected (#), or private (-).
+The operations (bottom). Each operation includes the complete signature of the C++ method and its return value, if it is a function. As with attributes, operations can be prefixed by visibility indicators.
+UML supports more complex specifications for individual classes, as well as ways of specifying relationships among classes. We will incorporate these into our documentation as the class progresses (so, you have something to look forward to).
+
+Design Standards
+You are expected to adhere to certain basic principles of good design:
+
+Variables. Each variable (whether it is a primitive type, a composite type [such as an array], or an object) has an associated scope and storage class. A variable's scope may be local to some small block of code (e.g., a loop), local to some function, "global" within some file (using the static keyword), or truly global throughout your program (with possible access limitation using the extern keyword). A variable with local scope may be allocated at block entry and deallocated at exit (storage class auto) or be allocated at the start of program execution and exist across block executions (storage class static). You need to decide the scope and storage class of each variable in your design. You should use non-local and static variables only if they are truly needed, and global variables only if absolutely necessary. You need to justify your design decisions for all non-local and static variables. In addition, you should use const whenever possible, especially with respect to pointers.
+Functions. A function (this includes methods) should perform a single, simply describable operation. If you find that a "function" you are considering really does two things, then it is probably better to make it two functions.
+Parameters and return values. One reason for the above definition of functions is that their interfaces are kept small — they have fewer parameters and return values. Monitor your functions' interface complexity. If you are passing/returning many items, this may be a sign that this is not a function.
+Methods. One of the major topics of this course is that of abstract data types (ADTs) and their implementation using classes. Remember that the functions you define for your ADTs will correspond exactly to the methods in your code. For each method (actually each ADT member, be it an operation or a data item), you will need to decide whether it should be publicly accessible or not. You should make a method public only if that is truly necessary, based on the definition of the ADT in question. Your design should make the distinction between public and non-public methods very clear, with the public nature of methods self-evident from the definition of the ADT. Moreover, by default you should declare your methods as const (the query property in UML), unless that method is intended to modify the object's state.
+ADTs and the implementation "wall". ADTs consist of an externally-visible interface and a supposedly hidden implementation. However, a clever programmer can circumvent the wall around implementation by returning internal, implementation-dependent information about the ADT. You must not do this — it goes against the purpose of object-oriented design.
+ADTs and UI/IO. ADTs implement internal data types which are independent of the exact nature of any particular program. ADTs should not include any user interface operations. As a simple example, imagine you are designing an array ADT, and that you included operations tied to a graphical user interface. This would mean that your ADT would be unusable in a non-GUI environment, such as a computer controlling a car's engine. You should detach issues of user interface and I/O from ADT design — they are separate parts of the design. Note that it is acceptable to include generic stream I/O operations in your ADT design (implemented in C++ with overloaded friend operator<< and friend operator>>), as these are fundamental and machine-independent.
+Coding
+
+Coding standards means writing code that is easily understood and including comments that clearly document its function. Code clarity is aided by consistent and useful indentation, identifiers with descriptive names and naming conventions, and the use of special language constructs, such as const and typedef. More precisely, our course coding standards are:
+
+Indentation. Blocks of code should be indented three spaces. This includes the bodies of functions. You must set your IDE or editor so indentation actually produces actual ASCII/UTF-8 space characters in your source code files, not tabs. Why do I ask for spaces? Well, one reason is nicely summarized by this (https://stackoverflow.blog/2017/06/15/developers-use-spaces-make-money-use-tabs/) Stack Overflow article. 😏
+Variables. Variables should be given descriptive names, unless they are very clearly just loop counters or the like. There should be comments associated with each variable declaration explaining how the variable fits into the algorithm, and including invariant information such as its legal range of values.
+File comments. Each file should begin with a comment containing the file name, author name, date, and a description of the purpose of the code it contains. The file that contains main() should also include documentation for the overall program: a description of the program's input and output, how to use the program, assumptions such as the type of data expected, exceptions, and a brief description of the major algorithms and key variables. This is the information you generated in your design, before you started coding. It is expected that you will merely copy the appropriate sections of the your design document into comments for each file and function (see function comments, below).
+Class files. Separate .cpp and .h files should be used for each class. The file names should exactly match the class names including capitalization.
+Library includes. C++ STL include files should be included like #include <vector>, rather than #include <vector.h>. Similarly, C includes should be as #include <cmath>, not #include <math.h>. It is acceptable to use the directive using namespace std;.
+Classes. Do not return references or pointers to internal class/object structures. Classes must not expose any of their internal implementations.
+Functions (including methods). Functions should be used for appropriate operations, with reference arguments used only when necessary. The type of each function must be declared (use void when necessary). Methods should be declared const when they do not modify the object state (UML query property).
+Function comments. Each function should be preceded by a comment with a short description of the function's purpose and precise description of each of its parameters, preconditions, postconditions, return value, and functions called. For methods, this comment should appear in both the .cpp and .h files.
+Loop invariants. Each loop should be commented with invariant information.
+Assertions. Assertions should be inserted into the code where useful to explain important features or subtle logic. You may use comments or the assert() feature for these.
+You are also expected to avoid global variables (and you are required to justify their use if you do need to use them) and will not be permitted to use gotos in this class. 
