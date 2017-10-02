@@ -15,7 +15,7 @@
 // Source material from:
 // University of Washington Bothell
 // CSS 501A Data Structures And Object-Oriented Programming I
-// "CSS 501 Design and Coding Standards"
+// "Design and Coding Standards"
 // Michael Stiber
 //
 // Source file originally at:
@@ -113,24 +113,83 @@ V. Test Plan - Should focus on testing the correct operation of the program, not
       1. Typical value: 
       2. Low boundary : 
 
+
 --- STEP 02 --- STRUCTURE CHARTS ---
 
 I. See 'APPENDIX_00' - Displays the hierarchical algorithmic structure of a system.
-   A. Designate sub-procedures
-   B. Use annotated lines to indicate calls between functions
+   A. Designate 'Entire Problem'
+      0. Name and description
+      1. Box at top, center of diagram
+   B. Designate sub-problems
+      0. Name and description
+      2. Draw below relevant problem box, forming a logical hierarchy
+   C. Use annotated lines to indicate calls between functions
       0. Use arrowheads on lines to indicate direction of function calls
       1. Parameters - One-way information passed, but not modified.
          a. Draw with dot and arrow.
          b. Label with the name used by the calling procedure.
-      2. Return values
+      2. Return values - Value sent back by the called function
          a. If return value is not used by calling function, then omit.
          b. Otherwise, draw with dot and arrow.
          c. And label with the name used by the called procedure.
-      3. 
+      3. Modified parameters - Parameters passed via reference or to which pointers are passed.
+         a. Draw with dot and two arrows.
+         b. Arrows point to called and calling procedure.
+   D. Continue designating subproblems until you arrive at problems which can be solved
+      0. When all subproblem branches have solutions at all their leaves, the diagram is complete
 
 
+--- STEP 03 --- CLASS DIAGRAMS ---
+
+I. See 'APPENDIX_01' - Defines critical data for each defined class within the program
+
+II. Comprised of a rectangle, subdivided into three sections:
+
+   A. The class name
+      0. Located at the top
+      1. CamelCased
+
+   B. Attributes / Fields
+      0. Listed in the middle (in alphabetical order)
+      1. Prefixed by visibility (Optional)
+         a. '+' == public
+         b. '#' == protected
+         c. '-' == private
+      2. The attribute name (Required)
+         a. Lower-cased first word, CamelCased thereafter (e.g. "variableName")
+         b. End with colon character (':')
+      3. Data type (optional)
+      4. Initial assignment value (optional)
+         a. Preceded by 'gets' or assignment operator ("=")
+      5. Example: "+ someVariable : boolean = true"
+         a. Public boolean attribute named "someVariable", assigned the initial value of 'true'.
+
+   C. Operations
+      0. Listed at the bottom (in alphabetical order)
+      1. Prefixed by visibility (Optional)
+         a. '+' == public
+         b. '#' == protected
+         c. '-' == private
+      2. The attribute name (Required)
+         a. CamelCased (e.g. "OperationName")
+         b. End with colon character (':')
+      3. The return value (Required if applicable)
+         a. Lower-cased first word, CamelCased thereafter (e.g. "returnValue")
+         b. End with colon character (':')
+      4. Example: "+ SomeOperation(someArgument) : someReturn"
+         a. Public operation named "SomeOperation", receiving "someArgument", generates "someReturn"
 
 
+--- STEP 04 --- DESIGN STANDARDS ---
+I. Variable scope (in order of preference)
+   A. const - Constant, the value of the variable cannot be changed. Should be performed as often as possible
+   B. auto - Private, allocated and deallocated at block entry and exit, respectively
+   C. static - Global, allocated at program execution, deallocated at program termination (?CONFIRM?)
+   D. extern - ??? (?CONFIRM?)
+
+II. Functions
+   A. Should perform only one, simply defined operation
+   B. This operation may be the merging of two other functions
 
 // ---- END PRINTABLE CONTENT ----
 
