@@ -20,8 +20,8 @@
 //
 // Source file originally at:
 // https://canvas.uw.edu/courses/1116064/pages/css-501-design-and-coding-standards
-// (Deprecated by end of quarter; source closed. Content included as 'APPENDIX_01')
-
+// (Deprecated by end of quarter; source closed. Content included as 'APPENDIX_02')
+//
 // License:
 // This software is published under the GNU general license which guarantees end users
 // the freedom to run, study, share and modify the software.
@@ -191,13 +191,38 @@ II. Functions
    A. Should perform only one, simply defined operation
    B. This operation may be the merging of two other functions
 
+III. Parameters and Return Values
+   A. Descriptively named
+   B. Minimal in number per function
+
+IV. Methods
+   A. Descriptively named
+   B. Private by default - Properly encapsulated
+   C. const - Constant, by default unless method is intended to modify the object's state.
+
+V. Interfaces
+   A. The interface of an Abstract Data Type (ADT, also called a "class" or "object type") are the outward facing values.
+   B. Differentiated from internal implementation details.
+   C. Internal implementation and external interfaces should be kept separate.
+
+VI. Input-Output (I/O) and User-Interfacing (UI)
+   A. ADTs should not include any user interface operations
+      1. UI functionality should be a separate problem from ADT design
+   B. You *may* use generic stream I/O operators in ADT design
+      1. friend operator<< - ??? (?CONFIRM?)
+      2. friend operator>> - ??? (?CONFIRM?)
+
 // ---- END PRINTABLE CONTENT ----
 
 --- APPENDIX_00 ---
 Program UML Chart - <HYPERLINK OR ADDRESS GOES HERE>
 
 --- APPENDIX_01 ---
-CSS 501 Design and Coding Standards
+Class Diagrams - <HYPERLINK OR ADDRESS GOES HERE>
+
+--- APPENDIX_02 ---
+"CSS 501 Design and Coding Standards" text:
+
 "If builders built buildings the way programmers wrote programs, then the first woodpecker to come along would destroy civilization."
 
 "If cars had followed the same developmental path as computers, a Rolls Royce would cost $100, get a million miles per gallon, and explode once a year, killing everyone inside."
