@@ -207,10 +207,10 @@ V. Interfaces
 
 VI. Input-Output (I/O) and User-Interfacing (UI)
    A. ADTs should not include any user interface operations
-      1. UI functionality should be a separate problem from ADT design
+      0. UI functionality should be a separate problem from ADT design
    B. You *may* use generic stream I/O operators in ADT design
-      1. friend operator<< - ??? (?CONFIRM?)
-      2. friend operator>> - ??? (?CONFIRM?)
+      0. friend operator<< - ??? (?CONFIRM?)
+      1. friend operator>> - ??? (?CONFIRM?)
 
 // ---- END PRINTABLE CONTENT ----
 
