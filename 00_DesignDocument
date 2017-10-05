@@ -57,16 +57,16 @@ I. Problem Statement - Further divided into general categories:
    A. Problem description - A textual explanation of the problem to be solved.
 Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti.
 
-   B. Assumptions being made
+   B. Assumptions being made - Conditions stated by the problem specification.
 Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti.
 
-   C. Clarifications needed
+   C. Clarifications needed - Ambiguities or vague aspects of the problem specification.
 Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti.
 
-   D. Assumptions that can be made
+   D. Assumptions that can be made - Extrapolations based on initial conditions and clarifications.
 Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti.
 
-   E. Corner cases
+   E. Corner cases - What are the extreme use cases of this problem?
 Lorem ipsum dolor sit amet, cu menandri singulis usu. At nec perpetua petentium, no his solum deleniti.
 
 II. Input Data
@@ -110,11 +110,15 @@ V. Test Plan - Should focus on testing the correct operation of the program, not
       0. High boundary: 
       1. Typical value: 
       2. Low boundary : 
+      3. Procedure:
+      4. Expected result:
 
    B. Case 1: <Description>
       0. High boundary: 
       1. Typical value: 
       2. Low boundary : 
+      3. Procedure:
+      4. Expected result:
 
 
 --- STEP 02 --- STRUCTURE CHARTS ---
@@ -131,6 +135,7 @@ I. See 'APPENDIX_00' - Displays the hierarchical algorithmic structure of a syst
       1. Parameters - One-way information passed, but not modified.
          a. Draw with dot and arrow.
          b. Label with the name used by the calling procedure.
+         c. Write short description
       2. Return values - Value sent back by the called function
          a. If return value is not used by calling function, then omit.
          b. Otherwise, draw with dot and arrow.
