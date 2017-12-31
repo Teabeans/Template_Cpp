@@ -10,7 +10,7 @@
 //-------------------------------------|
 // File Description
 //-------------------------------------|
-// This file is the <File Description> file for the Concordance Assignment.
+// This file is the <File Description> file for the <Project Name>.
 // <Generalized Description of Program Function>
 
 //-------------------------------------|
@@ -28,7 +28,6 @@
 // Acknowledgements
 //-------------------------------------|
 
-//
 // Template author:
 // Tim Lum (twhlum@gmail.com)
 
@@ -39,60 +38,97 @@
 // https://en.wikipedia.org/wiki/BSD_licenses
 
 /*
-Copyright (c) <year>, <copyright holder>
-All rights reserved.
+MIT License
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Copyright (c) 2017 Timothy W. Lum (twhlum@gmail.com)
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-The views and conclusions contained in the software and documentation are those
-of the authors and should not be interpreted as representing official policies,
-either expressed or implied, of the FreeBSD Project.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 */
 
 //-------------------------------------|
 // Abbreviations
 //-------------------------------------|
-// Arg     == Argument
-// Char    == Character
-// Dbl     == Double
-// Desc    == Description
-// EQ      == Equals
-// Info    == Information
-// Int     == Integer
-// Invar   == Invariant
-// L       == Left
-// LH      == Left-Hand
-// MetCall == Method Call
-// Obj     == Object
-// Param   == Parameter
-// PosCond == Postcondition
-// Precond == Precondition
-// Ptr     == Pointer
-// R       == Right
-// RH      == Right-Hand
-// Ret     == Return
-// Str     == String
-// T       == Type
-// Val     == Value
-// Var     == Variable
+// (-)      == (UML) Private
+// (#)      == (UML) Protected
+// (+)      == (UML) Public
+// !        == Not
+// @        == At
+// #b2c     == #-Bit 2's Complement
+// Arg      == Argument
+// Alloc    == Allocate(d)
+// Char     == Character
+// Curr     == Current
+// DB       == Database
+// Dbl      == Double
+// Desc     == Description
+// deQ      == Dequeue
+// enQ      == Enqueue
+// EoF      == End of File
+// EoL      == End of Line
+// EQ       == Equals
+// Exts     == Extends
+// FIFO     == First In, First Out (Queue)
+// Gen      == Generic
+// Info     == Information
+// Inhrt    == Inherit
+// Int      == Integer
+// Invar    == Invariant
+// L        == Left
+// LIFO     == Last In, First Out (Stack)
+// LH       == Left-Hand
+// LL       == Linked List
+// LSB      == Least Significant Bit
+// LSD      == Least Significant Digit
+// Malloc   == Memory Allocate(d)
+// MetCall  == Method Call
+// Mo3      == Median of Three
+// MSB      == Most Significant Bit
+// MSD      == Most Significant Digit
+// NaN      == Not a Number
+// NaV      == Not a Value
+// Obj      == Object
+// Param    == Parameter
+// PosCond  == Postcondition
+// PreCond  == Precondition
+// Prev     == Previous
+// Ptr      == Pointer
+// Q        == Queue
+// R        == Right
+// Ret      == Return
+// RetVal   == Return Value
+// RGB      == Red Green Blue
+// (R)GB    == Red
+// R(G)B    == Green
+// RG(B)    == Blue
+// RH       == Right-Hand
+// RT       == Runtime
+// RtL      == Right to Left
+// Str      == String
+// T        == Type
+// Trav     == Traverse / Traversal
+ // PreOrd  == Pre-Order
+ // InOrd   == In-Order
+ // PostOrd == Post-Order
+// TtB      == Top to Bottom
+// Ur-      == Originator, foremost (ie. Ur-Node)
+// Val      == Value
+// Var      == Variable
 
 //-------------------------------------|
 // Code Standards
@@ -257,6 +293,7 @@ either expressed or implied, of the FreeBSD Project.
 //-------------------------------------|
 
 
+
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
 //       INCLUDE STATEMENTS
@@ -272,15 +309,29 @@ either expressed or implied, of the FreeBSD Project.
 // Necessary for file stream operations
 #include <fstream>
 
-// Field and method declarations for the Collector class
-#include "Collector.h"
+// Field and method declarations for the Prototype class
+#include "Prototype.h"
 
-using namespace std;
+// Optional: Recommended not to use
+// using namespace std;
+
 
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC FIELDS
+//       PRIVATE STRUCTS / CLASSES (-)
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// Do not redeclare these structs/classes in the .cpp.
+// Included here only for reference
+// See associated .h file for struct/class declarations
+
+
+
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+//       PRIVATE FIELDS (-)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
@@ -288,51 +339,41 @@ using namespace std;
 // Included here only for reference
 // See associated .h file for variable declarations
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #someVar1
 //-------------------------------------|
-// Desc:
-// Invar Info:  String holding the name or identifier of this tree.
-//     template <class typeT>
-//     string treeData = "";
+// Desc:   NULL
+// Invars: NULL
+// template <class typeT>
+// typeT someVar1;
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #someVar2
 //-------------------------------------|
-// Description: The target node of this linked list
-// Invariants:  String holding the name or identifier of this tree.
-//     template <class typeT>
-//     string treeData = "";
+// Desc:   NULL
+// Invars: NULL
+// string someVar2;
 
 
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC METHODS
+//       PRIVATE METHODS (-)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
-
-
-
-//-------|---------|---------|---------|---------|---------|---------|---------|
-//
-//       PRIVATE METHODS
-//
-//-------|---------|---------|---------|---------|---------|---------|---------|
-
-//-------------------------------------|
+// (-) --------------------------------|
 // #deletePostOrder()
 //-------------------------------------|
-// Description:      Helper method for post-order deletion method
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   All nodes have been deleted
-// Return value:     True - Signal of successful deletion traversal
+// Desc:    Helper method for post-order deletion method
+// Params:  None
+// PreCons: None
+// PosCons: All nodes have been deleted
+// RetVal:  True - Signal of successful deletion traversal
 //                   False - No deletion possible (empty tree)
-// Functions called: deletePostOrder()
+// MetCall: deletePostOrder()
 template <class typeT>
-bool Collector<typeT>::deletePostOrder() {
+bool Prototype<typeT>::deletePostOrder() {
    // Check for empty tree
    if (rootPtr == nullptr) {
       return (false);
@@ -343,69 +384,54 @@ bool Collector<typeT>::deletePostOrder() {
    }
 }
 
+// (-) --------------------------------|
+// #deletePostOrder(NodeGen*)
 //-------------------------------------|
-// #deletePostOrder()
-//-------------------------------------|
-// Description:      Recursive method for post-order deletion method
-// Parameters:       NodeGeneric* - The target node to be traversed and deleted
-// Preconditions:    None
-// Postconditions:   All nodes in this subtree have been deleted
-// Return value:     True - Signal of successful deletion traversal
-// Functions called: deletePostOrder()
+// Desc:    Recursive method for post-order deletion
+// Params:  NodeGen* - The target node to be traversed and deleted
+// PreCons: None
+// PosCons: All nodes in this subtree have been deleted
+// RetVal:  True - Signal of successful deletion traversal
+// MetCall: deletePostOrder()
 template <class typeT>
-bool Collector<typeT>::deletePostOrder(NodeGeneric<typeT>* thisNode) {
+bool Prototype<typeT>::deletePostOrder(NodeGen<typeT>* thisNode) {
    // Left traverse
-   if (thisNode->leftPtr != nullptr) {
-      deletePostOrder(thisNode->leftPtr);
+   if (thisNode->lPtr != nullptr) {
+      deletePostOrder(thisNode->lPtr);
    }
    // Right traverse
-   if (thisNode->rightPtr != nullptr) {
-      deletePostOrder(thisNode->rightPtr);
+   if (thisNode->rPtr != nullptr) {
+      deletePostOrder(thisNode->rPtr);
    }
    // Visit (delete)
    delete thisNode;
    return(true);
 }
 
+// (-) --------------------------------|
+// #travPreOrd()
 //-------------------------------------|
-// #obliviate()
-//-------------------------------------|
-// Description:      Deletes all nodes within the BST
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   All tree nodes have been deleted.
-//                   headNodePtr == nullptr
-// Return value:     None
-// Functions called: deletePostOrder()
+// Desc:    Helper method for pre-order traversal method
+// Params:  None
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+//          False - No traversal possible
+// MetCall: traversePreOrder()
 template <class typeT>
-void Collector<typeT>::obliviate() {
-   deletePostOrder();
-}
-
-//-------------------------------------|
-// #traversePreOrder()
-//-------------------------------------|
-// Description:      Helper method for pre-order traversal method
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-//                   False - No traversal possible
-// Functions called: traversePreOrder()
-template <class typeT>
-bool Collector<typeT>::traversePreOrder() {
+bool Prototype<typeT>::travPreOrd() const {
    // Check for empty tree
    if (rootPtr == nullptr) {
       return (false);
    }
    // Otherwise, return the results of the recursive traversal
    else {
-      return (traversePreOrder(rootPtr));
+      return (travPreOrd(rootPtr));
    }
 }
 
-//-------------------------------------|
-// #traversePreOrder(NodeGeneric*)
+// (-) --------------------------------|
+// #travPreOrd(NodeGen*)
 //-------------------------------------|
 // Description:      Recursive pre-order traversal method
 // Parameters:       NodeGeneric* arg1 - Pointer to the node to traverse
@@ -415,85 +441,85 @@ bool Collector<typeT>::traversePreOrder() {
 // Functions called: traversePreOrder()
 //                   visit()
 template <class typeT>
-bool Collector<typeT>::traversePreOrder(NodeGeneric<typeT>* thisNode) {
+bool Prototype<typeT>::travPreOrd(NodeGen<typeT>* thisNode) {
    visit(thisNode);
    if (thisNode->leftPtr != nullptr) {
-      traversePreOrder(thisNode->leftPtr);
+      travPreOrd(thisNode->leftPtr);
    }
    if (thisNode->rightPtr != nullptr) {
-      traversePreOrder(thisNode->rightPtr);
+      travPreOrd(thisNode->rightPtr);
    }
    return(true);
 }
 
 //-------------------------------------|
-// #traverseInOrder()
+// #travInOrd()
 //-------------------------------------|
-// Description:      Helper method for in-order traversal method
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-//                   False - No traversal possible
-// Functions called: traverseInOrder()
+// Desc:    Helper method for in-order traversal method
+// Params:  None
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+//          False - No traversal possible
+// MetCall: traverseInOrder()
 template <class typeT>
-bool Collector<typeT>::traverseInOrder() {
+bool Prototype<typeT>::travInOrd() const{
    // Check for empty tree
    if (rootPtr == nullptr) {
       return (false);
    }
    // Otherwise, return the results of the recursive traversal
    else {
-      return (traverseInOrder(rootPtr));
+      return (travInOrd(rootPtr));
    }
 }
 
 //-------------------------------------|
-// #traverseInOrder(NodeGeneric*)
+// #travInOrd(NodeGen*)
 //-------------------------------------|
-// Description:      Recursive in-order traversal method
-// Parameters:       NodeGeneric* arg1 - Pointer to the node to traverse
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-// Functions called: traverseInOrder()
-//                   visit()
+// Desc:    Recursive in-order traversal method
+// Params:  NodeGeneric* arg1 - Pointer to the node to traverse
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+// MetCall: travInOrd()
+//          visit()
 template <class typeT>
-bool Collector<typeT>::traverseInOrder(NodeGeneric<typeT>* thisNode) {
+bool Prototype<typeT>::travInOrd(NodeGen<typeT>* thisNode) {
    if (thisNode->leftPtr != nullptr) {
-      traverseInOrder(thisNode->leftPtr);
+      travInOrd(thisNode->leftPtr);
    }
    visit(thisNode);
    if (thisNode->rightPtr != nullptr) {
-      traverseInOrder(thisNode->rightPtr);
+      travInOrd(thisNode->rightPtr);
    }
    return(true);
 }
 
 //-------------------------------------|
-// #traversePostOrder()
+// #travPostOrd()
 //-------------------------------------|
-// Description:      Helper method for post-order traversal method
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-//                   False - No traversal possible
-// Functions called: traversePostOrder()
+// Desc:    Helper method for post-order traversal method
+// Params:  None
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+//          False - No traversal possible
+// MetCall: traversePostOrder()
 template <class typeT>
-bool Collector<typeT>::traversePostOrder() {
+bool Prototype<typeT>::travPostOrd() const{
    // Check for empty tree
    if (rootPtr == nullptr) {
       return (false);
    }
    // Otherwise, return the results of the recursive traversal
    else {
-      return (traversePostOrder(rootPtr));
+      return (travPostOrd(rootPtr));
    }
 }
 
 //-------------------------------------|
-// #traversePostOrder(NodeGeneric*)
+// #travPostOrd(NodeGen*)
 //-------------------------------------|
 // Description:      Recursive post-order traversal method
 // Parameters:       NodeGeneric* arg1 - Pointer to the node to traverse
@@ -503,30 +529,30 @@ bool Collector<typeT>::traversePostOrder() {
 // Functions called: traversePostOrder()
 //                   visit()
 template <class typeT>
-bool Collector<typeT>::traversePostOrder(NodeGeneric<typeT>* thisNode) {
+bool Prototype<typeT>::travPostOrd(NodeGen<typeT>* thisNode) {
    if (thisNode->leftPtr != nullptr) {
-      traversePostOrder(thisNode->leftPtr);
+      travPostOrd(thisNode->leftPtr);
    }
 
    if (thisNode->rightPtr != nullptr) {
-      traversePostOrder(thisNode->rightPtr);
+      travPostOrd(thisNode->rightPtr);
    }
 
    visit(thisNode);
    return(true);
 }
 
+// (-) --------------------------------|
+// #visit(NodeGen)
 //-------------------------------------|
-// #visit(NodeGeneric)
-//-------------------------------------|
-// Description:      Visits the node indicated by sending the nodeData content to cout.
-// Parameters:       NodeGeneric* - The target node being visited
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     None
-// Functions called: None
+// Desc:    Private: Visits the node indicated by sending the nodeData content to cout.
+// Param:   NodeGen* - The target node being visited
+// PreCons: None
+// PosCons: None
+// RetVal:  None
+// MetCall: None
 template <class typeT>
-void Collector<typeT>::visit(NodeGeneric<typeT>* thisNodePtr) const {
+void Prototype<typeT>::visit(NodeGen<typeT>* thisNodePtr) const {
    // Visit the node, but only perform an action if the node is undeleted
    if (thisNodePtr->isDeleted == false) {
       // Send the nodeData to the output stream
@@ -540,11 +566,55 @@ void Collector<typeT>::visit(NodeGeneric<typeT>* thisNodePtr) const {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC FIELDS
+//       PROTECTED STRUCTS / CLASSES
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// Do not redeclare these structs/classes in the .cpp.
+// Included here only for reference
+// See associated .h file for struct/class declarations
+
+
+
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+//       PROTECTED FIELDS
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// Do not redeclare these variables in the .cpp.
+// Included here only for reference
+// See associated .h file for variable declarations
+
+
+
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+//       PROTECTED METHODS
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
 // None
+
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+//       PUBLIC STRUCTS / CLASSES
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// Do not redeclare these structs/classes in the .cpp.
+// Included here only for reference
+// See associated .h file for struct/class declarations
+
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+//       PUBLIC FIELDS
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// Do not redeclare these variables in the .cpp.
+// Included here only for reference
+// See associated .h file for variable declarations
 
 
 
@@ -554,18 +624,18 @@ void Collector<typeT>::visit(NodeGeneric<typeT>* thisNodePtr) const {
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #find(typeT)
 //-------------------------------------|
-// Finds a node with an equal value of the string argument
-// Parameters:       typeT - The data to search for
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - An equivalent node was found
-//                   False - An equivalent node was not found
-// Functions called: None
+// Desc:    Finds a node with an equal value of the string argument
+// Param:   typeT - The data to search for
+// PreCons: None
+// PosCons: None
+// RetVal:  True - An equivalent node was found
+//          False - An equivalent node was not found
+// MetCall: None
 template <class typeT>
-bool Collector<typeT>::find(typeT someData) const {
+bool Prototype<typeT>::find(typeT someData) const {
    // If the tree is empty, do nothing
    if (rootPtr == nullptr) {
       // cout << "No value found. This tree is empty." << endl; // DEBUG
@@ -573,7 +643,7 @@ bool Collector<typeT>::find(typeT someData) const {
    }
    // Otherwise, start at the rootPtr
    else {
-      NodeGeneric<typeT>* currPtr = rootPtr;
+      NodeGen<typeT>* currPtr = rootPtr;
       // While we haven't run off the end of the tree...
       while (currPtr != nullptr) {
          // Found it! (And it's undeleted)
@@ -598,24 +668,24 @@ bool Collector<typeT>::find(typeT someData) const {
    }
 } // Closing find()
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #insert(typeT)
 //-------------------------------------|
-// Description:      Attempts to insert data of typeT to the tree
-// Parameters:       typeT arg1 - The data to insert
-// Preconditions:    None
-// Postconditions:   Data has been found or search has run off the tree
-//                   Data has been assigned to an appropriate node of the tree
-// Return value:     True - Data was not found in the tree. Assigned off a leaf.
-//                   False - Data found in the tree, assignment still occured
-// Functions called: NodeGeneric()
+// Desc:    Attempts to insert data of typeT to the tree
+// Params:  typeT arg1 - The data to insert
+// PreCons: None
+// PosCons: Data has been found or search has run off the tree
+//          Data has been assigned to an appropriate node of the tree
+// RetVal:  True - Data was not found in the tree. Assigned off a leaf.
+//          False - Data found in the tree, assignment still occured
+// MetCall: NodeGen()
 template <class typeT>
-bool Collector<typeT>::insert(typeT& someData) { // Receiving by reference
-   NodeGeneric<typeT>* currNodePtr = rootPtr;
-   NodeGeneric<typeT>* prevNodePtr = nullptr;
+bool Prototype<typeT>::insert(typeT& someData) { // Receiving by reference
+   NodeGen<typeT>* currNodePtr = rootPtr;
+   NodeGen<typeT>* prevNodePtr = nullptr;
    // Initial case: If tree is empty, insert a new node at the root
    if (rootPtr == nullptr) {
-      rootPtr = new NodeGeneric<typeT>(someData);
+      rootPtr = new NodeGen<typeT>(someData);
       // And halt execution
       return(true);
    }
@@ -667,28 +737,43 @@ bool Collector<typeT>::insert(typeT& someData) { // Receiving by reference
    return(true);
 } // Closing insert()
 
+// (+) --------------------------------|
+// #obliviate()
 //-------------------------------------|
+// Desc:      Deletes all nodes within the BST
+// Params:    None
+// PreCons:   None
+// PosCons:   All tree nodes have been deleted.
+//            headNodePtr == nullptr
+// RetVal:    None
+// MetCall:   deletePostOrder(NodeGen<T>*)
+template <class typeT>
+void Prototype<typeT>::obliviate() {
+   deletePostOrder(this->rootPtr);
+}
+
+// (+) --------------------------------|
 // #printout()
 //-------------------------------------|
-// Description:      Prints the tree to console
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     None
-// Functions called: traversePreOrder() - Optional
-//                   traverseInOrder - Prints tree in an in-order traversal
-//                   traversePostOrder() - Optional
+// Desc:    Prints the tree to console
+// Param:   None
+// PreCons: None
+// PosCons: None
+// RetVal:  None
+// MetCall: traversePreOrder() - Optional
+//          traverseInOrder - Prints tree in an in-order traversal
+//          traversePostOrder() - Optional
 template <class typeT>
-void Collector<typeT>::printout() {
-   // traversePreOrder();
-   // cout << endl;
+void Prototype<typeT>::printout() const {
+   traversePreOrder();
+   cout << endl;
    traverseInOrder();
    cout << endl;
-   // traversePostOrder();
-   // cout << endl;
-} // Closing ptintout()
+   traversePostOrder();
+   cout << endl;
+} // Closing printout()
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #setDelete()
 //-------------------------------------|
 // Description:      Finds a node with matching data and sets its deletion flag to true
@@ -699,7 +784,7 @@ void Collector<typeT>::printout() {
 //                   False - Node not found
 // Functions called: retrieve()
 template <class typeT>
-bool Collector<typeT>::setDelete(typeT someData) {
+bool Prototype<typeT>::setDelete(typeT someData) {
    NodeGeneric<typeT>* targetNodePtr = this->retrieve(someData);
    if (targetNodePtr != nullptr) {
       targetNodePtr->isDeleted = true;
@@ -717,24 +802,24 @@ bool Collector<typeT>::setDelete(typeT someData) {
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
 //-------------------------------------|
-// #Collector()
+// #Prototype()
 //-------------------------------------|
-// Default constructor for the Collector class
+// Default constructor for the Prototype class
 // Parameters:       None
 // Preconditions:    None
 // Postconditions:   An empty binary tree has been allocated
 // Return value:     None
 // Functions called: None
 template <class typeT>
-Collector<typeT>::Collector() {
-   treeData = "NameGoesHere";
+Prototype<typeT>::Prototype() {
+   this->treeData = "NameGoesHere";
    this->rootPtr = nullptr;
 }
 
 //-------------------------------------|
-// #Collector(string)
+// #Prototype(<T>)
 //-------------------------------------|
-// Constructor of the Collector class from a file address
+// Constructor of the Prototype class from a file address
 // Parameters:       string arg1 - A file address (name)
 // Preconditions:    None
 // Postconditions:   A binary tree of strings has been generated
@@ -743,7 +828,7 @@ Collector<typeT>::Collector() {
 //                   ifstream.open()
 //                   ifstream.close()
 template <class typeT>
-Collector<typeT>::Collector(string fileAddress) {
+Prototype<typeT>::Prototype(std::string fileAddress) {
    treeData = "NameGoesHere";
    rootPtr = nullptr;
    // String for storing a single word
@@ -764,16 +849,16 @@ Collector<typeT>::Collector(string fileAddress) {
 }
 
 //-------------------------------------|
-// #~Collector()
+// #~Prototype()
 //-------------------------------------|
-// Default destructor of the Collector class
+// Default destructor of the Prototype class
 // Parameters:       None
 // Preconditions:    None
 // Postconditions:   All memory allocated for BST Nodes has been deallocated
 // Return value:     None
 // Functions called: obliviate()
 template <class typeT>
-Collector<typeT>::~Collector() {
+Prototype<typeT>::~Prototype() {
    this->obliviate();
 }
 
@@ -793,12 +878,13 @@ Collector<typeT>::~Collector() {
 // PosCons: someField has been assigned someData
 // RetVal:  None (void)
 // MetCall: None
-void Prototype::setField(const dataType& someData) {
+template <class typeT>
+void Prototype<typeT>::setField(const typeT& someData) {
    someField = someData;
 }
 
 //-------------------------------------|
-// #setField(<templated>)
+// #getValue()
 //-------------------------------------|
 // Desc:    Custom behavior for the stream insertion operator
 // Param:   arg1 ostream& ostr - The receiving stream
@@ -808,22 +894,7 @@ void Prototype::setField(const dataType& someData) {
 // RetVal:  ostream& - The appended ostream object
 // MetCall: NULL
 template <class typeT>
-string Collector<typeT>::getValue() const {
-   return treeData;
-}
-
-//-------------------------------------|
-// #setField()
-//-------------------------------------|
-// Desc:    Custom behavior for the stream insertion operator
-// Param:   arg1 ostream& ostr - The receiving stream
-//          arg2 ThisClass& someObj - The object being inserted
-// PreCons: NULL
-// PosCons: NULL
-// RetVal:  ostream& - The appended ostream object
-// MetCall: NULL
-template <class typeT>
-string Collector<typeT>::getValue() const {
+std::string Prototype<typeT>::getValue() const {
    return treeData;
 }
 
@@ -845,7 +916,8 @@ string Collector<typeT>::getValue() const {
 // PosCons: NULL
 // RetVal:  Prototype& - The appended ostream object
 // MetCall: NULL
-Prototype& Prototype::operator=(const Prototype& RHarg) {
+template <class typeT>
+Prototype<typeT>& Prototype<typeT>::operator=(const Prototype<typeT>& RHarg) {
    // Check to see if "this" and "RHarg" are the same thing (by address)
    if (this == &RHarg) {
       // If the same, bail.
@@ -871,35 +943,16 @@ Prototype& Prototype::operator=(const Prototype& RHarg) {
 // PosCons: NULL
 // RetVal:  ostream& - The appended ostream object
 // MetCall: NULL
-ostream& operator<< (ostream& ostr, const Prototype& someObj) {
+template <class typeT>
+std::ostream& operator<< (std::ostream& ostr, const Prototype<typeT>& someObj) {
 
    // < Ostream<< Implementation Goes Here >
 
    return ostr;
 } // Closing operator<< overload
 
-
-
-//-------------------------------------|
-// #operator<<(<templated>)
-//-------------------------------------|
-// Desc:    Custom behavior for the stream insertion operator (templated)
-// Param:   arg1 ostream& ostr - The receiving stream
-//          arg2 ThisClass& someObj - The object being inserted
-// PreCons: NULL
-// PosCons: NULL
-// RetVal:  ostream& - The appended ostream object
-// MetCall: NULL
-template <typename T>
-ostream& operator<< (ostream& ostr, ThisClass<T>& someObj const) {
-
-   // < Ostream<< Implementation Goes Here >
-
-   return ostr;
-} // Closing operator<< overload (templated)
-
 //-------------------------------------|
 // End Student Code
 //-------------------------------------|
 
-// End of Template.cpp
+// End of Prototype.cpp
