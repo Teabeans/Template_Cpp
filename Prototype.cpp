@@ -433,13 +433,13 @@ bool Prototype<typeT>::travPreOrd() const {
 // (-) --------------------------------|
 // #travPreOrd(NodeGen*)
 //-------------------------------------|
-// Description:      Recursive pre-order traversal method
-// Parameters:       NodeGeneric* arg1 - Pointer to the node to traverse
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-// Functions called: traversePreOrder()
-//                   visit()
+// Desc:    Recursive pre-order traversal method
+// Params:  NodeGeneric* arg1 - Pointer to the node to traverse
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+// MetCall: traversePreOrder()
+//          visit()
 template <class typeT>
 bool Prototype<typeT>::travPreOrd(NodeGen<typeT>* thisNode) {
    visit(thisNode);
@@ -452,7 +452,7 @@ bool Prototype<typeT>::travPreOrd(NodeGen<typeT>* thisNode) {
    return(true);
 }
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #travInOrd()
 //-------------------------------------|
 // Desc:    Helper method for in-order traversal method
@@ -474,7 +474,7 @@ bool Prototype<typeT>::travInOrd() const{
    }
 }
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #travInOrd(NodeGen*)
 //-------------------------------------|
 // Desc:    Recursive in-order traversal method
@@ -496,7 +496,7 @@ bool Prototype<typeT>::travInOrd(NodeGen<typeT>* thisNode) {
    return(true);
 }
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #travPostOrd()
 //-------------------------------------|
 // Desc:    Helper method for post-order traversal method
@@ -518,26 +518,24 @@ bool Prototype<typeT>::travPostOrd() const{
    }
 }
 
-//-------------------------------------|
+// (-) --------------------------------|
 // #travPostOrd(NodeGen*)
 //-------------------------------------|
-// Description:      Recursive post-order traversal method
-// Parameters:       NodeGeneric* arg1 - Pointer to the node to traverse
-// Preconditions:    None
-// Postconditions:   None
-// Return value:     True - Signal of successful recursive traversal
-// Functions called: traversePostOrder()
-//                   visit()
+// Desc:    Recursive post-order traversal method
+// Params:  NodeGeneric* arg1 - Pointer to the node to traverse
+// PreCons: None
+// PosCons: None
+// RetVal:  True - Signal of successful recursive traversal
+// MetCall: traversePostOrder()
+//          visit()
 template <class typeT>
 bool Prototype<typeT>::travPostOrd(NodeGen<typeT>* thisNode) {
    if (thisNode->leftPtr != nullptr) {
       travPostOrd(thisNode->leftPtr);
    }
-
    if (thisNode->rightPtr != nullptr) {
       travPostOrd(thisNode->rightPtr);
    }
-
    visit(thisNode);
    return(true);
 }
@@ -564,9 +562,11 @@ void Prototype<typeT>::visit(NodeGen<typeT>* thisNodePtr) const {
    }
 }
 
+
+
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PROTECTED STRUCTS / CLASSES
+//       PROTECTED STRUCTS / CLASSES (#)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
@@ -578,7 +578,7 @@ void Prototype<typeT>::visit(NodeGen<typeT>* thisNodePtr) const {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PROTECTED FIELDS
+//       PROTECTED FIELDS (#)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
@@ -590,28 +590,32 @@ void Prototype<typeT>::visit(NodeGen<typeT>* thisNodePtr) const {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PROTECTED METHODS
+//       PROTECTED METHODS (#)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
 // None
 
+
+
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC STRUCTS / CLASSES
+//       PUBLIC STRUCTS / CLASSES (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
-//
+
 // Do not redeclare these structs/classes in the .cpp.
 // Included here only for reference
 // See associated .h file for struct/class declarations
 
+
+
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC FIELDS
+//       PUBLIC FIELDS (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
-//
+
 // Do not redeclare these variables in the .cpp.
 // Included here only for reference
 // See associated .h file for variable declarations
@@ -620,7 +624,7 @@ void Prototype<typeT>::visit(NodeGen<typeT>* thisNodePtr) const {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       PUBLIC METHODS
+//       PUBLIC METHODS (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
@@ -776,13 +780,13 @@ void Prototype<typeT>::printout() const {
 // (+) --------------------------------|
 // #setDelete()
 //-------------------------------------|
-// Description:      Finds a node with matching data and sets its deletion flag to true
-// Parameters:       typeT - The target data to find
-// Preconditions:    None
-// Postconditions:   Target node has been set to deleted or nothing happens
-// Return value:     True - 'Deletion' successful
-//                   False - Node not found
-// Functions called: retrieve()
+// Desc:    Finds a node with matching data and sets its deletion flag to true
+// Params:  typeT - The target data to find
+// PreCons: None
+// PosCons: Target node has been set to deleted or nothing happens
+// RetVal:  True - 'Deletion' successful
+//          False - Node not found
+// MetCall: retrieve()
 template <class typeT>
 bool Prototype<typeT>::setDelete(typeT someData) {
    NodeGeneric<typeT>* targetNodePtr = this->retrieve(someData);
@@ -797,36 +801,36 @@ bool Prototype<typeT>::setDelete(typeT someData) {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       CONSTRUCTORS / DESTRUCTORS
+//       CONSTRUCTORS / DESTRUCTORS (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #Prototype()
 //-------------------------------------|
-// Default constructor for the Prototype class
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   An empty binary tree has been allocated
-// Return value:     None
-// Functions called: None
+// Desc:    Default constructor for the Prototype class
+// Params:  None
+// PreCons: None
+// PosCons: An empty binary tree has been allocated
+// RetVal:  None
+// MetCall: None
 template <class typeT>
 Prototype<typeT>::Prototype() {
    this->treeData = "NameGoesHere";
    this->rootPtr = nullptr;
 }
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #Prototype(<T>)
 //-------------------------------------|
-// Constructor of the Prototype class from a file address
-// Parameters:       string arg1 - A file address (name)
-// Preconditions:    None
-// Postconditions:   A binary tree of strings has been generated
-// Return value:     None
-// Functions called: insert()
-//                   ifstream.open()
-//                   ifstream.close()
+// Desc:    Constructor of the Prototype class from a file address
+// Params:  string arg1 - A file address (name)
+// PreCons: None
+// PosCons: A binary tree of strings has been generated
+// RetVal:  None
+// MetCall: insert()
+//          ifstream.open()
+//          ifstream.close()
 template <class typeT>
 Prototype<typeT>::Prototype(std::string fileAddress) {
    treeData = "NameGoesHere";
@@ -848,15 +852,15 @@ Prototype<typeT>::Prototype(std::string fileAddress) {
    fileInputObj.close();
 }
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #~Prototype()
 //-------------------------------------|
-// Default destructor of the Prototype class
-// Parameters:       None
-// Preconditions:    None
-// Postconditions:   All memory allocated for BST Nodes has been deallocated
-// Return value:     None
-// Functions called: obliviate()
+// Desc:    Default destructor of the Prototype class
+// Params:  None
+// PreCons: None
+// PosCons: All memory allocated for BST Nodes has been deallocated
+// RetVal:  None
+// MetCall: obliviate()
 template <class typeT>
 Prototype<typeT>::~Prototype() {
    this->obliviate();
@@ -865,11 +869,11 @@ Prototype<typeT>::~Prototype() {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       GETTERS / SETTERS
+//       GETTERS / SETTERS (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #setField()
 //-------------------------------------|
 // Desc:    Sets value of <Some Field> to the received argument
@@ -883,7 +887,7 @@ void Prototype<typeT>::setField(const typeT& someData) {
    someField = someData;
 }
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #getValue()
 //-------------------------------------|
 // Desc:    Custom behavior for the stream insertion operator
@@ -902,11 +906,11 @@ std::string Prototype<typeT>::getValue() const {
 
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-//       OPERATOR OVERLOADS
+//       OPERATOR OVERLOADS (+)
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #operator=()
 //-------------------------------------|
 // Desc:    Custom behavior for the stream insertion operator
@@ -933,7 +937,7 @@ Prototype<typeT>& Prototype<typeT>::operator=(const Prototype<typeT>& RHarg) {
 
 
 
-//-------------------------------------|
+// (+) --------------------------------|
 // #operator<<()
 //-------------------------------------|
 // Desc:    Custom behavior for the stream insertion operator
@@ -955,4 +959,4 @@ std::ostream& operator<< (std::ostream& ostr, const Prototype<typeT>& someObj) {
 // End Student Code
 //-------------------------------------|
 
-// End of Prototype.cpp
+// End of file - Prototype.cpp
