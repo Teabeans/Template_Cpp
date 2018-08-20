@@ -1,17 +1,22 @@
+//-------|---------|---------|---------|---------|---------|---------|---------|
+//
+// <File Name>.<extension>
+//
+//-------|---------|---------|---------|---------|---------|---------|---------|
+
+//-----------------------------------------------------------------------------|
+// AUTHORSHIP
+//-----------------------------------------------------------------------------|
+//
 // <First Name> <Last Name>
 // <Contact Information>
-// 2017.MM.DD
-// For the University of Washington Bothell CSS <Course Number><Course Section>
-// Autumn 2017, Graduate Certificate in Software Design & Development (GCSDD)
+// <Created Date>
+// <Modified Date>
 //
-// File Description:
-// <Short explanation of file purpose and function>
-//
-// (If this file contains 'main()' ) Program Description:
-// <Explanation of overall program purpose and function>
-//
-// Required files:
-// <Files needed to run this program>
+
+//-----------------------------------------------------------------------------|
+// ACKNOWLEDGMENTS
+//-----------------------------------------------------------------------------|
 //
 // Acknowledgements:
 // Source material from:
@@ -23,73 +28,108 @@
 // Template author:
 // Tim Lum (twhlum@gmail.com)
 //
-// License: (Note to student, the following is optional)
-// This software is published under the GNU general license which guarantees
-// end users the freedom to run, study, share and modify the software.
-// https://www.gnu.org/licenses/gpl.html
+
+//-----------------------------------------------------------------------------|
+// FILE DESCRIPTION
+//-----------------------------------------------------------------------------|
 //
-// Code Standards:
-// I. Comment at beginning of file (above) stating (at a minimum):
-//    A. File Name
-//    B. Author Name
-//    C. Date
-//    D. Description of code purpose 
-// II. Indentation:
-//    A. 3 whitespaces ("   ")
-//    B. May vary depending on language and instructor
-// III. Variables:
-//    A. Descriptive, legible name
-//    B. Comment over any variable declaration describing:
-//       0. Its use in the algorithm
-//       1. Invariant information such as legal ranges of values
-// IV. Class Files:
-//    A. Separate *.cpp and *.h files should be used for each class.
-//    B. Files names must exactly match class names (case-sensitive)
-// V. Includes:
-//    A. Calls for content ("#include") from the Standard Template Library (STL) should be formatted as follows:
-//       0. DO type:     #include <vector>
-//       1. Do NOT type: #include <vector.h>
-//    B. You may use the directive "using namespace std;"
-//       0. ??? (?CONFIRM?)
-// VI. Classes:
-//    A. Return values:
-//       0. Do NOT return references to internal class structures.
-//       1. Do NOT return pointers to internal class structures.
-//    B. Do NOT expose any details of the internal implementation.
-// VII. Functions + Methods:
-//    A. Functions should be used for appropriate operations.
-//    B. Reference arguments should be used only when necessary.
-//    C. The (return?CONFIRM?) type of each function must be declared
-//       0. Use 'void' when necessary
-//    D. Declare as 'const' (unalterable) when no modification is made to the object state
-//       0. UML 'query' property (?CONFIRM?)
-// VIII. Function Comments:
-//    A. DO include a comment prior to each function which includes the function's:
-//       0. Purpose - Why does the function exist?
-//       1. Parameters - What fields does the function contain?
-//       2. Preconditions - What conditions must be true prior to the function call?
-//       3. Postconditions - What conditions must be true after the function call?
-//       4. Return value - What is the nature and range of the value returned by the function?
-//       5. Functions called - What other functions are called by this function?
-// IX. Loop invariants
-//    A. Each loop should be commented with 'invariant' information (?CONFIRM?)
-// X. Assertions:
-//    A. May be comments or the 'assert()' feature.
-//    B. Insert where useful to explain important features or subtle logic.
-//    C. What, exactly, is an assertion (?CONFIRM?)
-// XI. Prohibited (unless justified):
-//    A. Global variables
-//    B. "Gotos" (?CONFIRM?)
+// <Short explanation of file purpose and function>
 //
-// ---- BEGIN STUDENT CODE ----
+// (If this file contains 'main()' ) Program Description:
+// <Explanation of overall program purpose and function>
 //
-// ---- END STUDENT CODE ----
+
+//-----------------------------------------------------------------------------|
+// PACKAGE FILES
+//-----------------------------------------------------------------------------|
 //
+// <Files needed to run this program>
+//
+
+//-----------------------------------------------------------------------------|
+// USAGE
+//-----------------------------------------------------------------------------|
+//
+// <Description of setup and usage>
+//
+
+//-----------------------------------------------------------------------------|
+// ERRATA
+//-----------------------------------------------------------------------------|
+//
+// <Any other comments>
+//
+
+//-----------------------------------------------------------------------------|
+// LICENSE
+//-----------------------------------------------------------------------------|
+// 
+// <License> or <Refer to LICENSE.txt>
+//
+
+//-----------------------------------------------------------------------------|
+// CODE STANDARDS
+//-----------------------------------------------------------------------------|
+//
+// <Standards> or <Refer to CODESTANDARDS.txt>
+//
+
+//-----------------------------------------------------------------------------|
+// IMPORTS / INCLUDES
+//-----------------------------------------------------------------------------|
+
 #import <ThingsToImport>
+
+// For input/output operations
+#include <iostream>
+
+// For width-formatted outputs
+#include <iomanip>
+
+// For stringstream operations
+#include <sstream>
+
+// For string operations
+#include <string>
+
+// For input/output
+#include <stdio.h>
+
+// For PThread functionality
+#include <pthread.h>
+
+// Class declarations
+#include "Shop.h"
+
+//-----------------------------------------------------------------------------|
+// DEFINES
+//-----------------------------------------------------------------------------|
+
+#define PI  3.141569
+#define TAU 6.283185
+
+//-----------------------------------------------------------------------------|
+// GLOBAL VARIABLES
+//-----------------------------------------------------------------------------|
+
+int    INT_PI     = 3;
+int    INT_TAU    = 6;
+float  FLOAT_PI   = 3.14159265;
+float  FLOAT_TAU  = 6.28318530;
+double DOUBLE_PI  = 3.141592653589793238;
+double DOUBLE_TAU = 6.283185307179586476;
+
+//-----------------------------------------------------------------------------|
+// NAMESPACES
+//-----------------------------------------------------------------------------|
 
 using namespace std;
 
-int main()<
+//-----------------------------------------------------------------------------|
+// DRIVER (If applicable)
+//-----------------------------------------------------------------------------|
+
+void main() {
     cout << "Hello, World!" << endl;
 
 // <Variable Type> <Data Type> <Variable Name> <Assignment Operator> <Value>
@@ -99,3 +139,28 @@ int main()<
 
     return 0;
 }
+
+//-----------------------------------------------------------------------------|
+// PUBLIC FIELDS
+//-----------------------------------------------------------------------------|
+public:
+
+//-----------------------------------------------------------------------------|
+// PUBLIC METHODS
+//-----------------------------------------------------------------------------|
+public:
+
+//-----------------------------------------------------------------------------|
+// GETTERS/SETTERS
+//-----------------------------------------------------------------------------|
+public:
+
+//-----------------------------------------------------------------------------|
+// PRIVATE FIELDS
+//-----------------------------------------------------------------------------|
+private:
+
+//-----------------------------------------------------------------------------|
+// PUBLIC METHODS
+//-----------------------------------------------------------------------------|
+private:
