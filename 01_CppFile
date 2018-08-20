@@ -1,6 +1,6 @@
 //-------|---------|---------|---------|---------|---------|---------|---------|
 //
-// <File Name>.<extension>
+// <FileName>.<Extension>
 //
 //-------|---------|---------|---------|---------|---------|---------|---------|
 
@@ -8,10 +8,10 @@
 // AUTHORSHIP
 //-----------------------------------------------------------------------------|
 //
-// <First Name> <Last Name>
-// <Contact Information>
-// Created:  <Created Date>
-// Modified: <Modified Date>
+// <FirstName> <LastName>
+// <ContactInformation>
+// Created:  <YYYY.MM.DD>
+// Modified: <YYYY.MM.DD>
 //
 
 //-----------------------------------------------------------------------------|
@@ -19,7 +19,7 @@
 //-----------------------------------------------------------------------------|
 //
 // Template author:
-// Tim Lum (twhlum@gmail.com)
+// Tim Lum (github.com/Teabeans/Template_Cpp)
 //
 
 //-----------------------------------------------------------------------------|
@@ -121,7 +121,7 @@
 // DECLARATIONS
 //-----------------------------------------------------------------------------|
 
-// Refer to <File Name>.h or
+// Refer to <FileName>.h or
 // Field and method declarations go here
 
 //-----------------------------------------------------------------------------|
@@ -152,15 +152,9 @@ using namespace std;
 // DRIVER (If applicable)
 //-----------------------------------------------------------------------------|
 
-void main() {
+int main( int argc, char* argv[] ) {
     cout << "Hello, World!" << endl;
-
-// <Variable Type> <Data Type> <Variable Name> <Assignment Operator> <Value>
-    const double PI = 3.14159;
-// "const" - Variable cannot be changed (similar to "final" in Java)
-// Convention is to capitalize 'const' variables (also similar to Java)
-
-    return 0;
+    return( 0 );
 }
 
 //-----------------------------------------------------------------------------|
@@ -184,6 +178,8 @@ public:
 private:
 
 //-----------------------------------------------------------------------------|
-// PUBLIC METHODS
+// PRIVATE METHODS
 //-----------------------------------------------------------------------------|
 private:
+
+// End of file - <FileName>.<Extension>
