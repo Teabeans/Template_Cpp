@@ -71,50 +71,47 @@
 // IMPORTS / INCLUDES
 //-----------------------------------------------------------------------------|
 
-#include <time.h>    // For gettimeofday
-
 // CONTAINERS
-#include <array>         // http://www.cplusplus.com/reference/array/array/
-#include <deque>         // http://www.cplusplus.com/reference/deque/deque/
-#include <forward_list>  // http://www.cplusplus.com/reference/forward_list/forward_list/
-#include <list>          // http://www.cplusplus.com/reference/list/list/
-#include <map>           // http://www.cplusplus.com/reference/map/map/
-#include <queue>         // http://www.cplusplus.com/reference/queue/queue/
-#include <set>           // http://www.cplusplus.com/reference/set/set/
-#include <stack>         // http://www.cplusplus.com/reference/stack/stack/
-#include <unordered_map> // http://www.cplusplus.com/reference/unordered_map/unordered_map/
-#include <unordered_set> // http://www.cplusplus.com/reference/unordered_set/unordered_set/
-#include <vector>        // http://www.cplusplus.com/reference/vector/vector/
+// #include <array>              // http://www.cplusplus.com/reference/array/array/
+// #include <deque>              // http://www.cplusplus.com/reference/deque/deque/
+// #include <forward_list>       // http://www.cplusplus.com/reference/forward_list/forward_list/
+// #include <list>               // http://www.cplusplus.com/reference/list/list/
+// #include <map>                // http://www.cplusplus.com/reference/map/map/
+// #include <queue>              // http://www.cplusplus.com/reference/queue/queue/
+// #include <set>                // http://www.cplusplus.com/reference/set/set/
+// #include <stack>              // http://www.cplusplus.com/reference/stack/stack/
+// #include <unordered_map>      // http://www.cplusplus.com/reference/unordered_map/unordered_map/
+// #include <unordered_set>      // http://www.cplusplus.com/reference/unordered_set/unordered_set/
+// #include <vector>             // http://www.cplusplus.com/reference/vector/vector/
 
 // INPUT / OUTPUT
-#include <iostream>      // For input/output (C++)
-#include <stdio.h>       // For input/output (C)
-#include <iomanip>       // For width-formatted outputs
-#include <fstream>       // For file-stream
+#include <iostream>              // For input/output (C++)
+// #include <stdio.h>            // For input/output (C)
+#include <iomanip>               // For width-formatted outputs
+// #include <fstream>            // For file-stream
 
 // MULTITHREADING
-#include <pthread.h>     // https://www.tutorialspoint.com/cplusplus/cpp_multithreading.htm
-#include <atomic>
-#include <condition_variable>
-#include <future>
-#include <mutex>
-#include <thread>        // http://www.cplusplus.com/reference/thread/thread/
+// #include <pthread.h>          // https://www.tutorialspoint.com/cplusplus/cpp_multithreading.htm
+// #include <atomic>             // http://www.cplusplus.com/reference/atomic/
+// #include <condition_variable> // http://www.cplusplus.com/reference/condition_variable/
+// #include <future>             // http://www.cplusplus.com/reference/future/
+// #include <mutex>              // http://www.cplusplus.com/reference/mutex/
+// #include <thread>             // http://www.cplusplus.com/reference/thread/thread/
 
 // EXCEPTIONS
-#include <exception>     // 
+#include <exception>             // http://www.cplusplus.com/reference/exception/exception/
+#include <assert.h>              // http://www.cplusplus.com/reference/cassert/assert/
 
 // OTHER
-#include <chrono>        // http://www.cplusplus.com/reference/chrono/
-#include <random>        // http://www.cplusplus.com/reference/random/
-#include <string>        // http://www.cplusplus.com/reference/string/
-#include <sstream>       // http://www.cplusplus.com/reference/sstream/
-#include <utility>       // http://www.cplusplus.com/reference/utility/
+#include <chrono>                // http://www.cplusplus.com/reference/chrono/
+// #include <time.h>             // Superceded by <chrono>
+#include <random>                // http://www.cplusplus.com/reference/random/
+#include <string>                // http://www.cplusplus.com/reference/string/
+#include <sstream>               // http://www.cplusplus.com/reference/sstream/
+#include <utility>               // http://www.cplusplus.com/reference/utility/
+// #include <unistd.h>           // Provides access to the POSIX operating system AP
 
-
-// For usleep (microsleep)
-#include <unistd.h>
-
-// Class declarations
+// CLASS DECLARATIONS
 // #include "MyFile.h"
 
 //-----------------------------------------------------------------------------|
@@ -128,6 +125,7 @@
 // DEFINES
 //-----------------------------------------------------------------------------|
 
+#define NDEBUG                   // Omit for assertions, include to disable
 #define PI  3.141569
 #define TAU 6.283185
 
@@ -135,6 +133,8 @@
 // GLOBAL VARIABLES
 //-----------------------------------------------------------------------------|
 
+bool   VERBOSE    = true;
+bool   DEBUG_MODE = true;
 int    INT_PI     = 3;
 int    INT_TAU    = 6;
 float  FLOAT_PI   = 3.14159265;
@@ -146,40 +146,43 @@ double DOUBLE_TAU = 6.283185307179586476;
 // NAMESPACES
 //-----------------------------------------------------------------------------|
 
-using namespace std;
+// NOTE: Use of namespaces is discouraged
+// using namespace std;
 
 //-----------------------------------------------------------------------------|
 // DRIVER (If applicable)
 //-----------------------------------------------------------------------------|
 
 int main( int argc, char* argv[] ) {
-    cout << "Hello, World!" << endl;
-    return( 0 );
+   std::cout << "Hello, World!" << std::endl;
+   std::string assertTest = "This is not a test";
+   assert( assertTest == "This is a test" );
+   return( 0 );
 }
 
 //-----------------------------------------------------------------------------|
 // PUBLIC FIELDS
 //-----------------------------------------------------------------------------|
-public:
+//public:
 
 //-----------------------------------------------------------------------------|
 // PUBLIC METHODS
 //-----------------------------------------------------------------------------|
-public:
+//public:
 
 //-----------------------------------------------------------------------------|
 // GETTERS/SETTERS
 //-----------------------------------------------------------------------------|
-public:
+//public:
 
 //-----------------------------------------------------------------------------|
 // PRIVATE FIELDS
 //-----------------------------------------------------------------------------|
-private:
+//private:
 
 //-----------------------------------------------------------------------------|
 // PRIVATE METHODS
 //-----------------------------------------------------------------------------|
-private:
+//private:
 
 // End of file - <FileName>.<Extension>
