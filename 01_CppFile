@@ -103,6 +103,7 @@
 #include <assert.h>              // http://www.cplusplus.com/reference/cassert/assert/
 
 // OTHER
+#include <algorithm>             // http://www.cplusplus.com/reference/algorithm
 #include <chrono>                // http://www.cplusplus.com/reference/chrono/
 // #include <time.h>             // Superceded by <chrono>
 #include <random>                // http://www.cplusplus.com/reference/random/
