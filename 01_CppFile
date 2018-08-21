@@ -161,7 +161,7 @@ double DOUBLE_TAU = 6.283185307179586476;
 //-----------------------------------------------------------------------------|
 
 int main( int argc, char* argv[] ) {
-   std::cout << "Hello, World!" << std::endl;
+   printHelloWorld( );
    std::string assertTest = "This is not a test";
    assert( assertTest == "This is a test" );
    return( 0 );
@@ -192,16 +192,16 @@ int main( int argc, char* argv[] ) {
 //-----------------------------------------------------------------------------|
 
 // (+) --------------------------------|
-// #aStaticMethod( )
+// #printHelloWorld( )
 // ------------------------------------|
-// Desc:    TODO
-// Params:  TODO
-// PreCons: TODO
-// PosCons: TODO
-// RetVal:  TODO
-void aStaticMethod( ) {
-
-} // Closing someMethod( )
+// Desc:    Prints "Hello, World!" to console out
+// Params:  None
+// PreCons: None
+// PosCons: None
+// RetVal:  None
+void printHelloWorld( ) {
+   std::cout << "Hello, World!" << std::endl;
+} // Closing printHelloWorld( )
 
 
 
